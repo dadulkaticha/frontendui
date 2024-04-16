@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 import { UserPage, UserEditPage, UserRolesEditPage, GroupPage, GroupEditPage, GroupRolesEditPage } from "./Pages";
 import { SearchPage } from "./Pages/SearchPage";
+import { SurveyPage } from "./Pages/SurveyPage";
 
 // import { UserPage, GroupPage } from "./Pages";
 
@@ -16,6 +17,11 @@ export const Routes = [
     {
         path: "/user/view/:id",
         element: <UserPage />,
+        errorElement: <SearchPage />,
+    },
+    {
+        path: "/survey/view/:id",
+        element: <SurveyPage />,
         errorElement: <SearchPage />,
     },
     {
@@ -55,7 +61,7 @@ export const Routes = [
     },    
 ]
 
-const router = createBrowserRouter(Routes, {basename: "/ug"});
+const router = createBrowserRouter(Routes, {basename: "/surveys"});
 // const router = createBrowserRouter(Routes);
 
 export const AppRouter = () => <RouterProvider router={router} />
