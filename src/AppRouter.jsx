@@ -5,6 +5,7 @@ import {
 import { UserPage, UserEditPage, UserRolesEditPage, GroupPage, GroupEditPage, GroupRolesEditPage } from "./Pages";
 import { SearchPage } from "./Pages/SearchPage";
 import { SurveyPage } from "./Pages/SurveyPage";
+import { SurveyEditPage } from "./Pages/SurveyEditPage";
 
 // import { UserPage, GroupPage } from "./Pages";
 
@@ -27,6 +28,11 @@ export const Routes = [
     {
         path: "/user/edit/:id",
         element: <UserEditPage />,
+        errorElement: <SearchPage />,
+    },
+    {
+        path: "/survey/edit/:id",
+        element: <SurveyEditPage />,
         errorElement: <SearchPage />,
     },
     {
@@ -63,5 +69,4 @@ export const Routes = [
 
 const router = createBrowserRouter(Routes, {basename: "/surveys"});
 // const router = createBrowserRouter(Routes);
-
 export const AppRouter = () => <RouterProvider router={router} />
