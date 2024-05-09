@@ -1,10 +1,11 @@
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { SurveyLink } from './SurveyLink'
 
 export const SurveyMediumCard = ({survey}) => {
     return (
-        <CardCapsule  title={"Událost - atributy: " + survey?.name}>
+        <CardCapsule  title={<>Událost <SurveyLink survey={survey } /></>}>
 
             <Row>
                 <Col>Název</Col>

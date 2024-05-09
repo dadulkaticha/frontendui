@@ -4,11 +4,12 @@ import Col from 'react-bootstrap/Col'
 //import { UserRolesCard } from './UserRolesCard'
 //import { UserRawCard } from './UserRawCard'
 import { SurveyMediumCard } from './SurveyMediumCard'
+import { SurveyLink } from './SurveyLink'
 //import { UserLink } from './UserLink'
 
 export const SurveyLargeCard = ({survey, children}) => {
     return (
-        <CardCapsule  title={"Survey " + survey?.name}>
+        <CardCapsule  title={<>Událost <SurveyLink survey={survey } /></>}>
         <Row>
             <Col md={3}>
                 <SurveyMediumCard survey={survey}/>

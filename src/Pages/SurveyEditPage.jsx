@@ -4,13 +4,14 @@ import { useParams } from "react-router-dom"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
 import { FetchSurveyByIdAsyncAction } from "../Queries/FetchSurveyByIdAsyncAction"
 import { SurveyLargeCard } from "../Components/Survey/SurveyLargeCard"
+import { SurveyEditCard } from "../Components/Survey/SurveyEditCard"
 
-const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst uživatele", success: "Načtení uživatele se povedlo"})
+const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst survey", success: "Načtení survey se povedlo"})
 export const SurveyEditPage = ()  => {
     const {id} = useParams()
     const [onResolve, onReject] = validator(useDispatch())
-    const [survey, userPromise] = useFreshItem({id}, FetchSurveyByIdAsyncAction )
-    userPromise.then(onResolve, onReject)
+    const [survey, surveyPromise] = useFreshItem({id}, FetchSurveyByIdAsyncAction )
+    surveyPromise.then(onResolve, onReject)
 
     if (survey) {
         return (
@@ -20,9 +21,7 @@ export const SurveyEditPage = ()  => {
             //    {JSON.stringify(event)}
             //</div>
             <SurveyLargeCard survey={survey}>
-                 <SurveyLargeCard survey={survey}>
-                Heureka
-                </SurveyLargeCard>
+                <SurveyEditCard survey = {survey} />
             </SurveyLargeCard>
         )
     } else {
