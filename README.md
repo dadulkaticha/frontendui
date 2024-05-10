@@ -20,4 +20,4 @@ Based on React, developed with vite stack.
 
 9 května 2024 - problém s Queries, nejde editovat
 
-10 května 2024 - druhý projektový den
+10 května 2024 - druhý projektový den, datum poslední změny převedeno do formátu string 
