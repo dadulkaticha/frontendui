@@ -17,7 +17,7 @@ export const SurveyEditCard = ({survey}) => {
     const onOk = () => {}
     const [visible, setVisible] = useState(true) */
     return (
-        <CardCapsule  title={<>Událost <SurveyLink survey={survey } /></>}>
+        <CardCapsule  title={<>Dotazník <SurveyLink survey={survey } /></>}>
             <Row>
                 <Col>
                     <EditableAttributeText item={survey} attributeName ="name" label="Název" asyncUpdater={UpdateSurveyAsyncAction}/>

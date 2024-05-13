@@ -9,7 +9,7 @@ import { SurveyLink } from './SurveyLink'
 
 export const SurveyLargeCard = ({survey, children}) => {
     return (
-        <CardCapsule  title={<>Událost <SurveyLink survey={survey } /></>}>
+        <CardCapsule  title={<>Dotazník <SurveyLink survey={survey } /></>}>
         <Row>
             <Col md={3}>
                 <SurveyMediumCard survey={survey}/>
@@ -19,7 +19,7 @@ export const SurveyLargeCard = ({survey, children}) => {
                 {children}
             </Col>
             <Col md={3}>
-                <SurveyMediumCard survey={survey}/>
+                {/* <SurveyMediumCard survey={survey}/> */}
                 {/*<UserRolesCard user={user}/>*/}
             </Col>
 

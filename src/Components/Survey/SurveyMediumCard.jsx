@@ -6,7 +6,7 @@ import { SurveyLink } from './SurveyLink'
 export const SurveyMediumCard = ({survey}) => {
     const last = new Date(survey?.lastchange).toDateString()
     return (
-        <CardCapsule  title={<>Událost <SurveyLink survey={survey } /></>}>
+        <CardCapsule  title={<>Dotazník <SurveyLink survey={survey } /></>}>
 
             <Row>
                 <Col>Název</Col>
@@ -18,7 +18,7 @@ export const SurveyMediumCard = ({survey}) => {
             </Row>
             <Row>
                 <Col>Otázky</Col>
-                <Col>{survey?.questions}</Col>
+                <Col>{JSON.stringify(survey?.questions)}</Col>
             </Row>
         </CardCapsule>
     )
