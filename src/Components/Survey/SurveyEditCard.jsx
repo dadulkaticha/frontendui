@@ -23,11 +23,11 @@ export const SurveyEditCard = ({survey}) => {
                     <EditableAttributeText item={survey} attributeName ="name" label="Název" asyncUpdater={UpdateSurveyAsyncAction}/>
                 </Col>
             </Row>
-            <Row>
+            {/* <Row>
                 <Col>
-               {/*  <SurveyEditType survey = {survey}/> */} 
+                 <SurveyEditType survey = {survey}/>  
                 </Col>
-            </Row>
+            </Row> */}
         </CardCapsule>
     )
 }

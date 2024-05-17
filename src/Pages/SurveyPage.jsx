@@ -21,7 +21,8 @@ export const SurveyPage = ()  => {
             //</div>
             <SurveyLargeCard survey={survey}/>
         )
-    } else {
+    }
+     else {
         return (
             <div>Loading...</div>
         )

@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import { Dropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
+import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src"
+import { base } from "../../config"
 
 export const SurveyLink_ = ({survey, children}) => {
     return (
-        <Link to={"/survey/view/" + survey?.id}>{children?children:survey?.name}</Link>
+        <ProxyLink to={base + "/survey/view/" + survey?.id}>{children?children:survey?.name}</ProxyLink>
     )
 }
 
@@ -26,10 +28,9 @@ export const SurveyLink = ({survey, children, menu=true}) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item ><Link to={"/survey/view/" + survey?.id} >Zobrazit</Link></Dropdown.Item>
-                    <Dropdown.Item ><Link to={"/survey/edit/" + survey?.id} >Editovat</Link></Dropdown.Item>
-                    {/* <Dropdown.Item ><Link to={"/eventpresences/view/" + event?.id} >Účast</Link></Dropdown.Item> */}
-                    <Dropdown.Item ><Link to={"/surveyquestions/view/" + survey?.id} >Anketa</Link></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={base + "/survey/view/" + survey?.id} >Zobrazit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={base + "/survey/edit/" + survey?.id} >Editovat</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={base + "/surveyquestions/view/" + survey?.id} >Anketa</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>                
 

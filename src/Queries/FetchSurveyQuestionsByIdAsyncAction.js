@@ -7,11 +7,18 @@ const query = `query ($id: UUID!) {
           id
           name
  		      lastchange
-          questions{
+           questions {
+            __typename
             id
+            lastchange
             name
+            answers {
+              aswered
+              id
+              lastchange
+            }
           }
-      }
+        }
     }`
 
-export const FetchSurveyPresencesByIdAsyncAction = CreateAsyncActionFromQuery(query)
+export const FetchSurveyQuestionsByIdAsyncAction = CreateAsyncActionFromQuery(query)
