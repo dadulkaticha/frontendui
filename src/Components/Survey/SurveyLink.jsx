@@ -30,7 +30,7 @@ export const SurveyLink = ({survey, children, menu=true}) => {
                 <Dropdown.Menu>
                     <Dropdown.Item as={"div"}><ProxyLink to={base + "/survey/view/" + survey?.id} >Zobrazit</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as={"div"}><ProxyLink to={base + "/survey/edit/" + survey?.id} >Editovat</ProxyLink></Dropdown.Item>
-                    <Dropdown.Item as={"div"}><ProxyLink to={base + "/surveyquestions/view/" + survey?.id} >Anketa</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={base + "/surveyquestions/view/" + survey?.questions?.id} >Anketa</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>                
 
