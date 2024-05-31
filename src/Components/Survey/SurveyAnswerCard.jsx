@@ -12,27 +12,16 @@ import { SurveyLink } from './SurveyLink'
 //     return UpdateEventAsyncAction(changedItem)
 // }
 const AnswersRow = ({answer}) => {
-
     return (
         <tr>
             <td><a href={`/surveys/answer/edit/${answer?.id}`}>{answer?.value}</a></td>
             {answer?.aswered ? <td>Ano</td> : <td>Ne</td>}
-            {/* <td>{answer?.answered}</td> */}
-            {/* <td>
-                {question?.answers.map(answer => (
-                    <div key={answer.id}>
-                        <p>Odpověď: {answer.aswered}</p>
-                        <p>ID: {answer.id}</p>
-                        <p>Datum poslední změny: {answer.lastchange}</p>
-                    </div>
-                ))}
-            </td> */}
+            <td>{answer?.lastchange}</td>
         </tr>
     )
 }
 
 export const SurveyAnswerCard = ({question}) => {
-
     const answers = question?.answers || []
     return (
         <CardCapsule  title={<>Otázka: {question.name}</>}>
@@ -41,6 +30,7 @@ export const SurveyAnswerCard = ({question}) => {
                     <tr>
                         <th>Odpověď</th>
                         <th>Zodpovězeno</th>
+                        <th>Poslední změna</th>
                     </tr>
                 </thead>
                 <tbody>

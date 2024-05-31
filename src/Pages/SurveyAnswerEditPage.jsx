@@ -18,7 +18,8 @@ export const SurveyAnswerEditPage = ()  => {
             </SurveyLargeCard> */
             <SurveyAnswerEditCard answer={answer} />
         )
-    } else {
+    }
+    else {
         return (
             <div>Nahrávám odpověď...</div>
         )

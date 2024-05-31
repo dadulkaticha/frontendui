@@ -5,6 +5,7 @@ const query = `query ($id: UUID!) {
     __typename
     id
     name
+    type{id name}
     answers {
       id
       value

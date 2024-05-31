@@ -17,7 +17,7 @@ const AnswersRow = ({answer}) => {
         <tr>
             <td>{answer?.value}</td>
             {/* <td>{answer?.answered}</td> */}
-            <td><EditableAttributeText item={answer} attributeName ="answered" label="Odpověď" asyncUpdater={UpdateAnswerAsyncAction}/></td>
+            <td><EditableAttributeText item={answer} attributeName ="value" label="Odpověď" asyncUpdater={UpdateAnswerAsyncAction}/></td>
             {/* <td>
                 {question?.answers.map(answer => (
                     <div key={answer.id}>
@@ -41,7 +41,35 @@ export const SurveyAnswerEditCard = ({answer}) => {
     }
     return (
         <CardCapsule title={<>Otázka: {answer.question.name}</>}>
-            {values.map(value => (<button key={value} className={value===answer.value?"btn btn-primary":"btn btn-outline-primary"} onClick={() => onClick(value)}>{value}</button>))}
+            {answer.question.type.name === 'Škála' ? (
+                values.map(value => (
+                    <button 
+                        key={value} 
+                        className={value===answer.value?"btn btn-primary":"btn btn-outline-primary"} 
+                        onClick={() => onClick(value)}
+                    >
+                        {value}
+                    </button>
+                ))
+            ) : answer.question.type.name === 'Otevřené' ? (
+                <EditableAttributeText 
+                    item={answer} 
+                    attributeName="value" 
+                    label="Odpověď" 
+                    asyncUpdater={UpdateAnswerAsyncAction}
+                />
+            ) : (
+                answer.question.type.name === 'Uzavřené' &&
+                ['Analýza informačních zdrojů', 'Informatika', 'Matematika', 'Krizové řízení'].map(value => (
+                    <button 
+                        key={value} 
+                        className={value===answer.value?"btn btn-primary":"btn btn-outline-primary"} 
+                        onClick={() => onClick(value)}
+                    >
+                        {value}
+                    </button>
+                ))
+            )}
         </CardCapsule>
     )
 }
