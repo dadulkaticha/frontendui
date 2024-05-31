@@ -1,14 +1,18 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
-const query = `query ($id: UUID!) {
-    result: questionById(id: $id) {
-    __typename
-    id
-    name
-    answers {
+  const query = `query MyQuery($id: UUID!) {
+    result: answerById(id: $id) {
       id
-      value
+      question {
+        id
+        name
+        order
+        type{id name}
+        values{id name order}
+      }
       aswered
+      lastchange
+      value
     }
   }`
 

@@ -7,9 +7,9 @@ import { SurveyLink } from './SurveyLink'
 const QuestionsRow = ({question}) => {
     return (
         <tr>
-            <td><SurveyLink survey={question}>{question?.name}</SurveyLink></td>
+            <td><a href={`/surveys/answers/view/${question?.id}`}>{question?.name}</a></td>
             <td>{question?.lastchange}</td>
-            <td>{question?.id}</td>
+            <td>{question?.answer}</td>
             {/* <td>
                 {question?.answers.map(answer => (
                     <div key={answer.id}>
@@ -44,3 +44,4 @@ export const SurveyQuestionsCard = ({survey}) => {
         </CardCapsule>
     )
 }
+

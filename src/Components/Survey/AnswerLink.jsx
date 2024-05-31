@@ -4,7 +4,7 @@ import { Dropdown } from "react-bootstrap";
 import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src"
 import { base } from "../../config"
 
-export const SurveyLink_ = ({survey, children}) => {
+export const AnswerLink_ = ({answer, children}) => {
     return (
         <ProxyLink to={base + "/survey/view/" + survey?.id}>{children?children:survey?.name}</ProxyLink>
     )
