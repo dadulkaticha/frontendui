@@ -25,3 +25,9 @@ Based on React, developed with vite stack.
 15 května 2024 - question card, question page, proxy link, confug.js (řešení erroru)
 
 17 května 2024 - publish novější verze
+
+23 května 2024 - vytvoření SurveyAnswerEditCard a SurveyAnswerEditPage
+
+30 května 2024 - upravení SurveyAnswerEditCard pro první otázku, přepsání otázky na serveru
+
+31 května 2024 - asi 3x mi failnul publish, SurveyAnswerEditCard jsem upravila pro všechny tři typy odpovědí, přemýšlím jak udělám user editaci odpovědí
