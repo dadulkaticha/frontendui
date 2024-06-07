@@ -10,6 +10,11 @@ const query = `query ($id: UUID!) {
           questions{
             id
             name
+            lastchange
+            type {
+              id
+              name
+            }
           }
       }
     }`

@@ -30,7 +30,7 @@ export const Routes = [
         //errorElement: <SearchPage />,
     },
     {
-        path: base + "/surveyquestions/view/:id",
+        path: base + "/question/view/:id",
         element: <SurveyQuestionsPage />,
         errorElement: <SearchPage />,
     },

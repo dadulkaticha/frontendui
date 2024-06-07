@@ -9,7 +9,7 @@ const QuestionsRow = ({question}) => {
         <tr>
             <td><a href={`/surveys/answers/view/${question?.id}`}>{question?.name}</a></td>
             <td>{question?.lastchange}</td>
-            <td>{question?.answer}</td>
+            <td>{question?.type.name}</td>
             {/* <td>
                 {question?.answers.map(answer => (
                     <div key={answer.id}>
@@ -23,16 +23,15 @@ const QuestionsRow = ({question}) => {
     )
 }
 
-export const SurveyQuestionsCard = ({survey}) => {
-    const questions = survey?.questions || []
+export const SurveyQuestionsCard = ({questions}) => {
     return (
-        <CardCapsule  title={<>Anketa <SurveyLink survey={survey } /></>}>
+        <CardCapsule  title={<>Anketa </>}>
             <table className='table table-striped table-bordered table-sm'>
                 <thead>
                     <tr>
                         <th>Otázka</th>
                         <th>Datum změny</th>
-                        <th>Odpověď</th>
+                        <th>Typ</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,4 +43,3 @@ export const SurveyQuestionsCard = ({survey}) => {
         </CardCapsule>
     )
 }
-

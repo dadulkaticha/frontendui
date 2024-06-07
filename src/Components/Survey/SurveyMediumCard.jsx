@@ -13,12 +13,8 @@ export const SurveyMediumCard = ({survey}) => {
                 <Col>{survey?.name}</Col>
             </Row>
             <Row>
-                <Col>Změna</Col>
+                <Col>Datum poslední změny</Col>
                 <Col>{last}</Col>
-            </Row>
-            <Row>
-                <Col>Otázky</Col>
-                <Col>{JSON.stringify(survey?.questions)}</Col>
             </Row>
         </CardCapsule>
     )
