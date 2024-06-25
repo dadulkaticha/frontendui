@@ -5,7 +5,8 @@ import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/u
 import { FetchSurveyByIdAsyncAction } from "../Queries/FetchSurveyByIdAsyncAction"
 import { SurveyLargeCard } from "../Components/Survey/SurveyLargeCard"
 import { SurveyEditCard } from "../Components/Survey/SurveyEditCard"
-import { SurveyQuestionEditCard } from "../Components/Survey/SurveyQuestionEditCard"
+//import { SurveyQuestionEditCard } from "../Components/Survey/SurveyQuestionEditCard"
+import { SurveyQuestionEditCard2 } from "../Components/Survey/SurveyQuestionEditCard2"
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst survey", success: "Načtení survey se povedlo"})
 export const SurveyEditPage = ()  => {
@@ -23,7 +24,7 @@ export const SurveyEditPage = ()  => {
             //</div>
             <SurveyLargeCard survey={survey}>
                 <SurveyEditCard survey = {survey} />
-                <SurveyQuestionEditCard questions={survey.questions} />
+                <SurveyQuestionEditCard2 survey={survey} />
             </SurveyLargeCard>
         )
     } else {

@@ -19,6 +19,7 @@ const CreateRandomQuestion = ({surveyId}) => {
 export const QuestionCreateButton = ({surveyId}) => {
     const dispatch = useDispatch()
     const onClick = () => {
+        console.log("aaa")
         const data = CreateRandomQuestion({surveyId});
         dispatch(CreateQuestionAsyncAction(data));
         console.log("fired creation of question", data);

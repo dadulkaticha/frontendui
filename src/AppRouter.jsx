@@ -10,6 +10,7 @@ import { SurveyQuestionsPage } from "./Pages/SurveyQuestionsPage";
 import { base } from "./config";
 import { SurveyAnswersViewPage } from "./Pages/SurveyAnswersViewPage";
 import { SurveyAnswerEditPage } from "./Pages/SurveyAnswerEditPage";
+import { UserAnswersPage } from "./Pages/UserAnswersPage";
 
 // import { UserPage, GroupPage } from "./Pages";
 
@@ -30,7 +31,17 @@ export const Routes = [
         //errorElement: <SearchPage />,
     },
     {
+        path: base + "/useranswers/edit/:id",
+        element: <UserAnswersPage />,
+        errorElement: <SearchPage />,
+    },
+    {
         path: base + "/question/view/:id",
+        element: <SurveyQuestionsPage />,
+        errorElement: <SearchPage />,
+    },
+    {
+        path: base + "/query/view/:id",
         element: <SurveyQuestionsPage />,
         errorElement: <SearchPage />,
     },
