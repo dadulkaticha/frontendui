@@ -9,7 +9,7 @@ import { QuestionLink } from './SurveyQuestionLink'
 
 export const SurveyQuestionsLargeCard = ({question, children}) => {
     return (
-        <CardCapsule  title={<>Dotazník <QuestionLink question={question } /></>}>
+        <CardCapsule  title={<>Otázka <QuestionLink question={question } /></>}>
         <Row>
             <Col md={3}>
                 <SurveyQuestionsMediumCard question={question}/>

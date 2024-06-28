@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 export const SurveyQuestionsMediumCard = ({question}) => {
     const last = new Date(question?.lastchange).toDateString()
     return (
-        <CardCapsule  title={<>Dotazník</>}>
+        <CardCapsule  title={<>Otázka</>}>
 
             <Row>
                 <Col>Otázka</Col>
@@ -23,6 +23,10 @@ export const SurveyQuestionsMediumCard = ({question}) => {
             <Row>
                 <Col>Typ otázky</Col>
                 <Col>{question?.type.name}</Col>
+            </Row>
+            <Row>
+                <Col>Dotazník</Col>
+                <Col><td><a href={`/surveys/survey/edit/${question?.survey.id}`}>{question?.survey.name}</a></td></Col>
             </Row>
         </CardCapsule>
     )

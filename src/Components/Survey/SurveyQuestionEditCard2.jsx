@@ -100,11 +100,10 @@ const QuestionsRow = ({question}) => {
     }
 
     
-
     return (
         <tr>
             <td><a href={`/surveys/question/view/${question?.id}`}>{question?.name}</a></td>
-            <td>{question?.lastchange}</td>
+            <td>{new Date(question?.lastchange).toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })}</td>
             <td>{question?.type.name}</td>
             <td><DeleteButton onClick={onClick}>D</DeleteButton></td>
         </tr>

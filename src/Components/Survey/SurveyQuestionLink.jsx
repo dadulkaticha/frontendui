@@ -28,7 +28,7 @@ export const QuestionLink = ({question, children, menu=true}) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item as={"div"}><ProxyLink to={base + "/survey/edit/" + question?.survey?.id} >Zpět</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={base + "/survey/edit/" + question?.survey?.id} >Odpovědět</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>                
 
