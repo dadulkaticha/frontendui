@@ -33,3 +33,5 @@ Based on React, developed with vite stack.
 31 května 2024 - asi 3x mi failnul publish, SurveyAnswerEditCard jsem upravila pro všechny tři typy odpovědí, přemýšlím jak udělám user editaci odpovědí
 
 7 června 2024 - update verze, vyřešení všeho co chybělo, krom user edit, přidala jsem question view a upravila chyby
+
+24 června 2024 - update verze, link v hlavním menu, /surveys/useranswers/edit/:user_id
