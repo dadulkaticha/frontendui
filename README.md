@@ -35,3 +35,5 @@ Based on React, developed with vite stack.
 7 června 2024 - update verze, vyřešení všeho co chybělo, krom user edit, přidala jsem question view a upravila chyby
 
 24 června 2024 - update verze, link v hlavním menu, /surveys/useranswers/edit/:user_id
+
+28 června 2024 - upravení názvu u otázek a datumu do lepšího formátu
