@@ -37,3 +37,5 @@ Based on React, developed with vite stack.
 24 června 2024 - update verze, link v hlavním menu, /surveys/useranswers/edit/:user_id
 
 28 června 2024 - upravení názvu u otázek a datumu do lepšího formátu
+
+1 července 2024 - upravení verze, klikatelný link na UOIS, asi 9x jsem dělala publish :))
