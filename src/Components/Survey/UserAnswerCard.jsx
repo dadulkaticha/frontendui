@@ -120,10 +120,13 @@ export const UserAnswerCard = ({usera}) => {
                     </tr>
                 </thead>
                 
-                <tbody>
+                {/*<tbody>
                     {usera.answers.map(
                         p => <AnswersRow key={p.id} answer={p} />
                     )}
+                </tbody>*/}
+                <tbody>
+                    {usera?.answers?.map(p => <AnswersRow key={p.id} answer={p} />) || null}
                 </tbody>
             </table>
             {/* <QuestionCreateButton survey={survey} /> */}
