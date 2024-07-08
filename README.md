@@ -39,3 +39,7 @@ Based on React, developed with vite stack.
 28 června 2024 - upravení názvu u otázek a datumu do lepšího formátu
 
 1 července 2024 - upravení verze, klikatelný link na UOIS, asi 9x jsem dělala publish :))
+
+7 července 2024 - opravení chyby v UserAnswerCard (řádek 124 cca)
+
+8 července 2024 - finální commit a publish
