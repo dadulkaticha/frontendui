@@ -13,6 +13,7 @@ export const UserAnswersPage = ()  => {
     useraPromise.then(onResolve, onReject)
 
     if (usera) {
+        // console.log("userans se nacetly")
         return (
             <UserAnswerCard usera={usera} />
         )

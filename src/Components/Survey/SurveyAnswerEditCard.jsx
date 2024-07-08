@@ -37,7 +37,7 @@ export const SurveyAnswerEditCard = ({answer}) => {
     const dispatch = useDispatch()
     const onClick = async (value) => {
         const updatedAnswer = { ...answer, value };
-        await dispatch(UpdateAnswerAsyncAction(updatedAnswer  ));
+        await dispatch(UpdateAnswerAsyncAction(updatedAnswer));
     }
     return (
         <CardCapsule title={<>Otázka: {answer.question.name}</>}>
